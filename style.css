@@ -1,0 +1,322 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  width: 80%;
+ margin: auto;
+}
+.hero-content em{
+  font-size: 20px;
+}
+.hero-content a{
+  font-size: 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+/* เมนูใหญ่ปกติ */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;  /* เปลี่ยนจาก fixed เพื่อให้เป็นเมนูเล็ก ๆ */
+    top: 60px; 
+    right: 20px; 
+    background-color: #111;
+    width: 150px;        /* เมนูเล็ก */
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transform: scale(0);  /* เริ่มต้นซ่อน */
+    transform-origin: top right;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    transform: scale(1); /* แสดงเมนู */
+  }
+
+  .nav-links li a {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hero-content li :hover{
+  color: #f0c436;
+}
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;       /* ทำให้เป็นวงกลม */
+  object-fit: cover;        /* ครอบภาพให้เต็มกรอบโดยไม่บิด */
+  display: block;
+  margin: 0 auto 20px auto; /* จัดให้อยู่ตรงกลางและมีระยะห่างด้านล่าง */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* เพิ่มเงาเล็กน้อยให้ดูเด่น */
+  border: 2px solid #fff;   /* เส้นขอบสีขาว */
+  transition: transform 0.3s ease;
+}
+
+/* เอฟเฟกต์เมื่อเอาเมาส์ชี้ */
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  background: url('003.jpg') center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+
+
+.scroll-down {
+  color: #ffffff;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-top: 10px;
+  text-transform: uppercase;
+  border: 2px solid #ffffff;
+  padding: 10px 20px;
+}
+
+.scroll-down:hover {
+        background-color: #fff;
+        color: #222;
+        border-color: #fff;
+    }
+/* Sections */
+.section {
+  padding: 60px 0;
+}
+
+/* Section for Get Started */
+.get-started {
+  padding: 60px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+.get-started .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.get-started-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hiker-image {
+  width: 50%;
+  max-width: 500px;
+  border-radius: 20px;   
+  height: auto;
+  margin-right: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ภาพดูโดดเด่น */
+}
+
+
+
+.text-content h2 {
+    color: #f0c436;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  color: #bbb;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-top: 10px;
+  text-transform: uppercase;
+  border: 2px solid #bbb;
+  padding: 10px 20px;
+}
+
+
+.read-more {
+  color: #bbb;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-top: 10px;
+  text-transform: uppercase;
+  border: 2px solid #bbb;
+  padding: 10px 20px;
+}
+
+.read-more:hover {
+        background-color: #fff;
+        color: #222;
+        border-color: #fff;
+    }
+/* Footer */
+footer {
+  background-color: #000;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #bbb;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.ex:hover {
+     font-size: 70px; /* สีเมื่อเอาเมาส์วาง */
+    }
+    /* ปรับแต่งปุ่ม Back to Top */
+.back-to-top {
+  position: fixed; /* ทำให้ปุ่มอยู่ที่ตำแหน่งคงที่ */
+  bottom: 20px; /* ระยะห่างจากด้านล่าง */
+  right: 20px; /* ระยะห่างจากด้านขวา */
+  background-color: #eccd40; /* สีพื้นหลัง */
+  color: white; /* สีข้อความ */
+  border: none; /* ไม่มีกรอบ */
+  border-radius: 5px; /* มุมมน */
+  padding: 20px 30px; /* ขนาดของปุ่ม */
+  cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ไปที่ปุ่ม */
+  font-size: 30px;
+  display: none; /* เริ่มต้นไม่ให้แสดงปุ่ม */
+}
+
+.back-to-top:hover {
+  background-color: #555; /* สีพื้นหลังเมื่อ hover */
+}
+/* ===== Contact Info (Ordered List) ===== */
+.contact-info {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-left: 30px;          /* ระยะห่างจากขอบซ้าย */
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: left;
+  list-style-type: decimal;    /* แสดงเลข 1, 2, 3... */
+}
+.at{
+  width: 20px;
+  height: 20px;
+}
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #f0c436;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #fff;
+  text-decoration: underline;
+}

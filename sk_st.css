@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  background: url('004.jpg') no-repeat center/cover;
+  height: 90vh;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 15, 40, 0.6);
+  height: 100%;
+  color: white;
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 14px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  line-height: 1.3;
+}
+
+.hero-text button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 1px solid white;
+  background: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-text button:hover {
+  background-color: white;
+  color: #001a33;
+}
+
+/* FEATURES */
+.features {
+ background: rgb(209, 207, 200);
+  display: flex;
+  align-items: center;      /* จัดให้อยู่ระดับเดียวกันแนวตั้ง */
+  justify-content: center;  /* ให้อยู่ชิดกันตรงกลาง */
+  gap: 40px;                /* ปรับระยะห่างระหว่างรูปกับข้อความ (ปรับค่านี้ได้) */
+  padding: 80px;
+  flex-wrap: wrap;          /* ให้ไม่หลุดจอในหน้าจอเล็ก */
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.stats img {
+  width: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h2 {
+  font-size: 36px;
+  color: #001a33;
+}
+
+.text {
+  max-width: 400px;
+}
+
+.text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.text button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border: 1px solid #001a33;
+  background: none;
+  color: #001a33;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.text button:hover {
+  background-color: #001a33;
+  color: white;
+}
+
+/* ICONS SECTION */
+.icons {
+  background-color: #001a33;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 80px;
+  flex-wrap: wrap;
+}
+
+.icon-box {
+  max-width: 220px;
+  text-align: center;
+}
+
+.icon-box h4 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+/* YACHT TYPES */
+.yacht-types {
+  padding: 80px;
+  text-align: center;
+   background: rgb(209, 207, 200);
+}
+
+.yacht-types h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 40px;
+}
+
+.type-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.type-card {
+  background: #f4f6f9;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.type-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.type-card h3 {
+  padding: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.type-card:hover {
+  transform: scale(1.05);
+}
+.place {
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+   background-color: #001a33;
+}
+
+.place img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+
+.place .text1 h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.place .text1 p {
+    margin-bottom: 20px;
+     color: #fff;
+}
+
+.place .text1 button {
+    padding: 10px 25px;
+    border: 1px solid #333;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.place .text1 button:hover {
+    background: #333;
+    color: #fff;
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #010b15;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+footer {
+  background-color: #212121;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #bbb;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+
